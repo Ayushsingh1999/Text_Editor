@@ -7,7 +7,7 @@ const ReszieComp = ({componentId}) => {
 
     const fetchData = async () =>
     {
-           try{const response = await axios.get(`http://localhost:5000/v1/adds?componentId=${componentId}`)
+           try{const response = await axios.get(`https://text-editor-backend.onrender.com/v1/adds?componentId=${componentId}`)
            const data =  response.data;
            if(data.length>0)
            {
@@ -33,7 +33,7 @@ const ReszieComp = ({componentId}) => {
     const handleAddButton  = async () =>
     {
         try {
-           await axios.post('http://localhost:5000/v1/add',
+           await axios.post('https://text-editor-backend.onrender.com/v1/add',
            {
             componentId : componentId,
             content : Text
@@ -48,7 +48,7 @@ const ReszieComp = ({componentId}) => {
     {
         try {
 
-           await axios.post('http://localhost:5000/v1/update',
+           await axios.post('https://text-editor-backend.onrender.com/v1/update',
            {
             componentId : componentId,
             content : Text
